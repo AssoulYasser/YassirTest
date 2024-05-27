@@ -5,6 +5,7 @@ import com.example.yassirtest.data.movies.sources.KtorClientFactory
 import com.example.yassirtest.data.movies.sources.MoviesDataSource
 import com.example.yassirtest.domain.movies.repositories.MoviesRepository
 import com.example.yassirtest.domain.movies.use_cases.GetMoviesUseCase
+import com.example.yassirtest.ui.activities.details.DetailsViewModel
 import com.example.yassirtest.ui.activities.main.MainViewModel
 import org.koin.androidx.viewmodel.dsl.viewModel
 import org.koin.core.context.GlobalContext.startKoin
@@ -27,6 +28,7 @@ object DependencyInjection {
 
     val viewModelModule = module {
         viewModel { MainViewModel(get()) }
+        viewModel { DetailsViewModel() }
     }
 
     fun startKoinInjection() = startKoin {
