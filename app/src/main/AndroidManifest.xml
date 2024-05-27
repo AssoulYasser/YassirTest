@@ -17,6 +17,7 @@
             android:name=".ui.activities.main.MainActivity"
             android:exported="true"
             android:label="@string/app_name"
+            android:screenOrientation="portrait"
             android:theme="@style/Theme.YassirTest">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -24,6 +25,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".ui.activities.details.DetailsActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.YassirTest"
+        />
     </application>
 
 </manifest>
